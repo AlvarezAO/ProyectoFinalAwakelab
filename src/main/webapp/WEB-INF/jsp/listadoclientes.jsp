@@ -1,4 +1,4 @@
-<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%> 
+<%-- <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%> 
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
  pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
@@ -16,7 +16,8 @@
     
 </head>
 
-<body>
+<body> --%>
+<%@include file="/head.jsp" %>
 <%@include file="/nav.jsp" %>
 
 <div class="container">
@@ -37,7 +38,7 @@
                     <h3 class="panel-title">Listado de Usuarios</h3>
                   </div>
                   <div class="col-4 text-right">
-                    <a role="button" aria-pressed="true" href="/cliform" class="btn btn-sm btn-primary btn-create">Agregar usuario</a>
+                    <a role="button" aria-pressed="true" href="cliform" class="btn btn-sm btn-primary btn-create">Agregar usuario</a>
                   </div>
                 </div>
               </div>

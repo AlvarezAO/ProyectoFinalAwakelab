@@ -16,8 +16,9 @@
                     <h2 class="text-info font-weight-light mb-5"><i class="fa fa-handshake-o"></i>SECURITY LIFE<br>&nbsp; &nbsp; Compañia de Seguros</h2>
                     <form name='loginForm' action=<c:url value='login' /> method='POST'>
                         <div class="form-group"><label class="text-secondary">Usuario</label><input class="form-control" type="text"  name='username' required="" value=''"></div>
-                        <div class="form-group"><label class="text-secondary">Contraseña</label><input class="form-control" type="password" name='password' required=""></div><input class="btn btn-info mt-2" type="submit" value="Ingresar"/>
-                         <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
+                        <div class="form-group"><label class="text-secondary">Contraseña</label><input class="form-control" type="password" name='password' required=""></div>
+                        <input class="btn btn-info mt-2" type="submit" value="Ingresar"/>
+                        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
                     </form>
                     <p class="mt-3 mb-0"></p>
                 </div>
@@ -27,8 +28,16 @@
             </div>
         </div>
     </div>
-
- <script src="/resources/js/jquery.min.js"></script>
- <script src="/resources/bootstrap/js/bootstrap.min.js"></script>
+<!-- 
+ <script src="resources/js/jquery.min.js"></script>
+ <script src="resources/bootstrap/js/bootstrap.min.js"></script> -->
  
-<%@include file="/footer.jsp"%>
+<footer class="py-5 bg-black">
+        <div class="container">
+            <p class="text-center text-white m-0 small">Copyright&nbsp;© Brand 2020</p>
+        </div>
+    </footer>
+    <script src="templatesDos/js/jquery.min.js"></script>
+    <script src="templatesDos/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
