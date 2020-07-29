@@ -24,6 +24,6 @@
     <link rel="stylesheet" href="templatesDos/fonts/font-awesome.min.css">
     <link rel="stylesheet" href="templatesDos/css/Bold-BS4-Footer-Simple.css">
 </head>
-<body>
+
 
       
