@@ -78,9 +78,6 @@
             
               </div>
   </div></div></div>
-     <script src="templatesUno/js/jquery.min.js"></script>
-    <script src="templatesUno/bootstrap/js/bootstrap.min.js"></script>
+   
 
-</body>
-
-</html>
+<%@include file="/footer.jsp" %>

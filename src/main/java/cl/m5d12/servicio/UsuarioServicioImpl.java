@@ -38,5 +38,10 @@ public class UsuarioServicioImpl implements UsuarioServicio {
 	public void editarUsuario(Usuario user) {
 		cr.save(user);
 	}
+	
+	@Override
+	public Usuario buscaRut(String rut) {
+		return cr.findByRut(rut);
+	}
 
 }

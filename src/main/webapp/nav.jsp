@@ -25,6 +25,8 @@
                     <li class="nav-item" role="presentation"></li>
                     <li class="nav-item" role="presentation"><a class="nav-link" href="#">Ver Solicitudes</a></li>
                     <li class="nav-item" role="presentation"></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="#">Reportes</a></li>
+                    <li class="nav-item" role="presentation"></li>
                     <li class="nav-item" role="presentation"><a class="nav-link" href="logout">Salir</a></li>
                     <li class="nav-item" role="presentation"></li>
                 </ul>
@@ -39,6 +41,12 @@
         <div class="container"><a class="navbar-brand" href="#">Una filial de PAMALNI</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navbarResponsive"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="nav navbar-nav ml-auto">
+               		<li class="nav-item" role="presentation"><a class="nav-link" href="menusolicitudes">Solicitudes</a></li>
+                    <li class="nav-item" role="presentation"></li>
+                	<li class="nav-item" role="presentation"><a class="nav-link" href="#">Reportes</a></li>
+                    <li class="nav-item" role="presentation"></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="#">Pagos</a></li>
+                    <li class="nav-item" role="presentation"></li>
                     <li class="nav-item" role="presentation"><a class="nav-link" href="logout">Salir</a></li>
                     <li class="nav-item" role="presentation"></li>
                 </ul>

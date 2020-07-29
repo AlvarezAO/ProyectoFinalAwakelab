@@ -4,6 +4,9 @@
 
  <sec:authorize access="hasRole('ADMIN')">
     <div><p>Este es admin</p></div>    
+    <sec:authorize access="isAuthenticated()">
+	    authenticated as <sec:authentication property="principal.username" /> 
+	</sec:authorize>
 </sec:authorize>
 
 <sec:authorize access="hasRole('USER')">

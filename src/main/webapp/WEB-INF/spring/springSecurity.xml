@@ -14,6 +14,7 @@ http://www.springframework.org/schema/security/spring-security.xsd">
 		<intercept-url pattern="/cliform" access="hasRole('ADMIN')" /><!--    hasRole('USUARIO')  -->
 		<intercept-url pattern="/editausuario" access="permitAll" /> 
 		<intercept-url pattern="/mainmenu" access="hasAnyRole('ADMIN','USER')" />
+		<intercept-url pattern="/menusolicitudes" access="hasAnyRole('ADMIN','USER')" />
 	
 	<form-login 
 		login-page="/login"
