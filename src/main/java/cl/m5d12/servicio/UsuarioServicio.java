@@ -11,5 +11,6 @@ public interface UsuarioServicio {
 	void agregarUsuario(Usuario user);
 	void eliminarUsuario(int usuarioid);
 	void editarUsuario(Usuario user);
+	Usuario buscaRut(String rut);
 	
 }

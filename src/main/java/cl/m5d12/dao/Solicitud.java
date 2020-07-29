@@ -15,12 +15,18 @@ public class Solicitud {
 	@GeneratedValue
 	@Column(name="IDSOLICITUD")
 	private int idsolicitud;
+	@Column(name="NOMBRESOLICITUD")
 	private String nombreSolicitud;
+	@Column(name="DETALLESOLICITUD")
 	private String detalleSolicitud;
+	@Column(name="FECHASOLICITUD")
 	private String fechaSolicitud;
+	@Column(name="ESTADOSOLICITUD")
 	private String estadoSolicitud;
+	@Column(name="TIPOSOLICITUD")
 	private String tipoSolicitud;
-	private int idUsuario;
+	@Column(name="USUARIOID")
+	private int usuarioid;
 	
 	//Constructor
 	public Solicitud() {
@@ -28,18 +34,18 @@ public class Solicitud {
 	}
 
 	public Solicitud(int idsolicitud, String nombreSolicitud, String detalleSolicitud, String fechaSolicitud,
-			String tipoSolicitud , int idUsuario) {
+			String tipoSolicitud , int usuarioid) {
 		
 		this.idsolicitud = idsolicitud;
 		this.nombreSolicitud = nombreSolicitud;
 		this.detalleSolicitud = detalleSolicitud;
 		this.fechaSolicitud = fechaSolicitud;
 		this.tipoSolicitud = tipoSolicitud;
-		this.idUsuario = idUsuario;
+		this.usuarioid = usuarioid;
 	}
 
 	public Solicitud(int idsolicitud, String nombreSolicitud, String detalleSolicitud, String fechaSolicitud,
-			String estadoSolicitud, String tipoSolicitud, int idUsuario) {
+			String estadoSolicitud, String tipoSolicitud, int usuarioid) {
 		
 		this.idsolicitud = idsolicitud;
 		this.nombreSolicitud = nombreSolicitud;
@@ -47,7 +53,7 @@ public class Solicitud {
 		this.fechaSolicitud = fechaSolicitud;
 		this.estadoSolicitud = estadoSolicitud;
 		this.tipoSolicitud = tipoSolicitud;
-		this.idUsuario = idUsuario;
+		this.usuarioid = usuarioid;
 	}
 
 	
@@ -100,8 +106,8 @@ public class Solicitud {
 		this.tipoSolicitud = tipoSolicitud;
 	}
 
-	 public int getIdUsuario() { return idUsuario; }
+	 public int getusuarioid() { return usuarioid; }
 	 
-	 public void setIdUsuario(int idUsuario) { this.idUsuario = idUsuario; }
+	 public void setusuarioid(int usuarioid) { this.usuarioid = usuarioid; }
 	
 }
