@@ -19,7 +19,21 @@
 <body> --%>
 <%@include file="/head.jsp" %>
 <%@include file="/nav.jsp" %>
-
+<style>      
+    body{
+        padding-top:60px;
+    }
+    /* fix padding under menu after resize */
+    @media screen and (max-width: 767px) {
+        body { padding-top: 60px; }
+    }
+    @media screen and (min-width:768px) and (max-width: 991px) {
+        body { padding-top: 110px; }
+    }
+    @media screen and (min-width: 992px) {
+        body { padding-top: 60px; }
+    }
+</style>
 
 <div class="container">
     <div class="row">
@@ -32,8 +46,8 @@
               <div class="col-8">
                 <h3 class="panel-title">Listado de Usuarios</h3>
                  </div>
-                  <div class="col-4 text-center">
-                    <a role="button" aria-pressed="true" href="cliform" class="btn btn-sm btn-primary btn-create">Agregar usuario</a>
+                  <div class="col-4 text-right">
+                    <a role="button" aria-pressed="true" title="Editar usuario" href="cliform" class="btn btn-sm btn-success btn-create">Agregar usuario</a>
                   </div>
                 </div>
               </div>
@@ -52,20 +66,20 @@
 						
 						</tr> 
                   </thead>
-                  <tbody>
+                  <tbody align="center">
                   <c:forEach items="${lclientes}" var="lista">
                           <tr>
                             <td align="center">
-                              <a class="btn btn-primary mt-3" href="editusuario/${lista.usuarioid}"><em class="fa fa-pencil xs"></em></a>
-                              <a class="btn btn-danger mt-3" href="eliminarusuario/${lista.usuarioid}"><em class="fa fa-trash xs"></em></a>
-                              <a class="btn btn-warning mt-3" href=""><em class="fa fa-male xs"></em></a>
+                              <a class="btn btn-primary mb-1" title="Editar usuario" href="editusuario/${lista.usuarioid}"><em class="fa fa-pencil xs"></em></a>
+                              <a class="btn btn-danger mb-1" title="Eliminar usuario" href="eliminarusuario/${lista.usuarioid}"><em class="fa fa-trash xs"></em></a>
+                              <a class="btn btn-warning mb-1" title="Dar de alta" href="agregarol/${lista.usuarioid}"><em class="fa fa-male xs"></em></a>
                             </td>
-                            <td>${lista.usuarioid}</td>
-							<td>${lista.nombre}</td>
-							<td>${lista.telefono}</td>
-							<td>${lista.correoelectronico}</td>
-							<td>${lista.rubro}</td>
-							<td>${lista.direccion}</td>
+                            <td class="align-middle">${lista.usuarioid}</td>
+							<td class="align-middle">${lista.nombre}</td>
+							<td class="align-middle">${lista.telefono}</td>
+							<td class="align-middle">${lista.correoelectronico}</td>
+							<td class="align-middle">${lista.rubro}</td>
+							<td class="align-middle">${lista.direccion}</td>
 							
                           </tr>
                     </c:forEach>

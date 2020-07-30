@@ -15,6 +15,7 @@
     
   <!-- Menú Administrador -->  
   <sec:authorize access="hasRole('ADMIN')">
+  <div class="navbar navbar-default navbar-static-top">
     <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-dark navbar-custom">
         <div class="container"><a class="navbar-brand" href="#">Una filial de PAMALNI</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navbarResponsive"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -32,7 +33,8 @@
                 </ul>
             </div>
         </div>
-    </nav>   
+    </nav>
+</div>   
 </sec:authorize>
 
 <!-- Menú Usuario  -->
