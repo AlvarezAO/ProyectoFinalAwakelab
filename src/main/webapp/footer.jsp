@@ -9,15 +9,15 @@
     <script src="resources/bootstrap/js/bootstrap.min.js"></script>
     
     <!-- Login -->
-    <script src="templatesDos/js/jquery.min.js"></script>
-    <script src="templatesDos/bootstrap/js/bootstrap.min.js"></script>
+<!--     <script src="templatesDos/js/jquery.min.js"></script> -->
+<!--     <script src="templatesDos/bootstrap/js/bootstrap.min.js"></script> -->
     
-    <!-- ListadoAdmin  -->
-    <script src="templatesUno/js/jquery.min.js"></script>
-    <script src="templatesUno/bootstrap/js/bootstrap.min.js"></script>
+<!--     ListadoAdmin  -->
+<!--     <script src="templatesUno/js/jquery.min.js"></script> -->
+<!--     <script src="templatesUno/bootstrap/js/bootstrap.min.js"></script> -->
     
-    <!-- MenuSolicitudes -->
-    <script src="templatesTres/js/jquery.min.js"></script>
-    <script src="templatesTres/bootstrap/js/bootstrap.min.js"></script>
+<!--     MenuSolicitudes -->
+<!--     <script src="templatesTres/js/jquery.min.js"></script> -->
+<!--     <script src="templatesTres/bootstrap/js/bootstrap.min.js"></script> -->
 </body>
 </html> 

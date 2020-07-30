@@ -20,31 +20,26 @@
 <%@include file="/head.jsp" %>
 <%@include file="/nav.jsp" %>
 
+
 <div class="container">
     <div class="row">
-    
-    
         <div class="col-md-10 offset-md-1">
-
     <p></p>
     <h1>SECURITY LIFE</h1>
-    <p></p>
-
-    <p> </p><p> </p>
-            <div class="panel panel-default panel-table">
-              <div class="panel-heading">
-                <div class="row">
-                  <div class="col-8">
-                    <h3 class="panel-title">Listado de Usuarios</h3>
-                  </div>
-                  <div class="col-4 text-right">
+       <div class="panel panel-default panel-table">
+          <div class="panel-heading">
+            <div class="row">
+              <div class="col-8">
+                <h3 class="panel-title">Listado de Usuarios</h3>
+                 </div>
+                  <div class="col-4 text-center">
                     <a role="button" aria-pressed="true" href="cliform" class="btn btn-sm btn-primary btn-create">Agregar usuario</a>
                   </div>
                 </div>
               </div>
               
-              <div class="panel-body">
-                <table class="table table-striped table-bordered table-list">
+              <div class="panel-body table-responsive">
+                <table class="table table-striped table-bordered table-list ">
                   <thead>
                     <tr>
                         <th><em class="fa fa-cog"></em>Acciones</th>
@@ -54,15 +49,16 @@
 						<th>Correo</th>
 						<th>Rubro</th>
 						<th>Dirección</th>
-						<th>Clave</th>
+						
 						</tr> 
                   </thead>
                   <tbody>
                   <c:forEach items="${lclientes}" var="lista">
                           <tr>
                             <td align="center">
-                              <a class="btn btn-default" href="editusuario/${lista.usuarioid}"><em class="fa fa-pencil"></em></a>
-                              <a class="btn btn-danger" href="eliminarusuario/${lista.usuarioid}"><em class="fa fa-trash"></em></a>
+                              <a class="btn btn-primary mt-3" href="editusuario/${lista.usuarioid}"><em class="fa fa-pencil xs"></em></a>
+                              <a class="btn btn-danger mt-3" href="eliminarusuario/${lista.usuarioid}"><em class="fa fa-trash xs"></em></a>
+                              <a class="btn btn-warning mt-3" href=""><em class="fa fa-male xs"></em></a>
                             </td>
                             <td>${lista.usuarioid}</td>
 							<td>${lista.nombre}</td>
@@ -70,14 +66,16 @@
 							<td>${lista.correoelectronico}</td>
 							<td>${lista.rubro}</td>
 							<td>${lista.direccion}</td>
-							<td>${lista.clave}</td>
+							
                           </tr>
                     </c:forEach>
-                        </tbody>
+                   </tbody>
                 </table>
-            
               </div>
-  </div></div></div>
+  		</div>
+ 	 </div>
+  </div>
+  </div>
    
 
 <%@include file="/footer.jsp" %>
