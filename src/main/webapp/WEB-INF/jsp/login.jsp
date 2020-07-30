@@ -11,7 +11,8 @@
  
  <style>      
     body{
-        padding-top:60px;
+    	
+        padding-top:200px;
     }
     /* fix padding under menu after resize */
     @media screen and (max-width: 767px) {
@@ -92,4 +93,3 @@
         </div>
     </div>
 
-<%@include file="/footer.jsp" %>
