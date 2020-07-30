@@ -2,30 +2,31 @@
    <%@include file="/nav.jsp" %>
 
         <h1>Agregar nuevo Cliente</h1>  
-       <form:form method="post" action="save">    
+       <form method="post" action="savesoli">    
         <table >    
          <tr>    
           <td>Nombre : </td>   
-          <td><form:input path="nombreSolicitud"  /></td>  
+          <td><input type="text" name="nombreSolicitud" value="${idcliente.getNombre()}" readonly /></td>  
          </tr> 
           <tr>    
           <td>Detalles : </td>   
-          <td><form:input path="detalleSolicitud"  /></td>  
+          <td><input type="text" name="detalleSolicitud"  /></td>  
          </tr>    
          <tr>    
           <td>Fecha :</td>    
-          <td><form:input path="fechaSolicitud" /></td>  
+          <td><input type="text" name="fechaSolicitud" /></td>  
          </tr>   
          <tr>    
           <td>Estado Solicitud :</td>    
-          <td><form:input path="estadoSolicitud" /></td>  
+          <td><input type="hidden" name="estadoSolicitud" /></td>  
          </tr>   
          <tr>    
           <td>Tipo Solicitud: </td>   
-          <td><form:input path="tipoSolicitud"  /></td>  
+          <td><input type="text" name="tipoSolicitud"  /></td>  
          </tr>    
          <tr>
-          <td><form:hidden path="usuarioid"  /></td>  
+         <td>Id Cliente: </td> 
+          <td><input type="hidden" name="usuarioid" value="${idcliente.getUsuarioid()}"  /></td>  
          </tr>    
           
          <tr>    
@@ -33,6 +34,6 @@
           <td><input type="submit" value="Agregar" /></td>    
          </tr>    
         </table>    
-       </form:form>   
+       </form>   
 
 	<%@include file="/footer.jsp" %>
