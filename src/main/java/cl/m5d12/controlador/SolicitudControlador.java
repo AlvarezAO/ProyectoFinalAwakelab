@@ -1,6 +1,9 @@
 package cl.m5d12.controlador;
 
+import java.security.Principal;
 import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
@@ -14,13 +17,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import cl.m5d12.dao.Solicitud;
+import cl.m5d12.dao.Usuario;
 import cl.m5d12.servicio.SolicitudServicio;
+import cl.m5d12.servicio.UsuarioServicio;
 
 @Controller
 public class SolicitudControlador {
 	
 	@Autowired
 	SolicitudServicio ss;
+	
+	@Autowired
+	UsuarioServicio us;
 	
 	@RequestMapping("/listarsolicitudes")
 	public String versol(Model m) {
@@ -30,7 +38,17 @@ public class SolicitudControlador {
 	}
 	
     @RequestMapping("/solform")    
-    public String showformulario(Model m){
+    public String showformulario(Model m, Model mo, String rut, HttpServletRequest request){
+    	
+    	Principal principal = request.getUserPrincipal();
+    	System.out.println(request.getUserPrincipal());
+    	System.out.println(principal.getName());
+    	String id = principal.getName();
+    	Usuario user = us.buscaRut(id);
+    	System.out.println(user.getNombre());
+    	System.out.println(user.getUsuarioid());
+    	
+    	mo.addAttribute("idcliente", user);
         m.addAttribute("command", new Solicitud());
         return "solform";
     } 
@@ -45,27 +63,11 @@ public class SolicitudControlador {
         return "mainmenu";
     } 
 
-    @RequestMapping(value="/savesoli",method = RequestMethod.POST)    
-    public String saveSoli(@ModelAttribute("sol") Solicitud soli){    
+    @RequestMapping(value="/savesoli", method = RequestMethod.POST)    
+    public String saveSolicitud(@ModelAttribute("sol") Solicitud soli){    
         ss.agregarSolicitud(soli);;
         return "redirect:/listarsolicitudes";
     }
-    	
-	/*
-	 * @RequestMapping("/error") public String errorLogin(ModelMap model) {
-	 * model.addAttribute("error", "true"); return "login";
-	 * 
-	 * }
-	 * 
-	 * @RequestMapping("/login") public String loginUser() {
-	 * System.out.println("Inside login"); return "login"; }
-	 * 
-	 * @RequestMapping("/logout") public String logoutUser() { Authentication auth =
-	 * SecurityContextHolder.getContext().getAuthentication(); if (auth != null){
-	 * SecurityContextHolder.getContext().setAuthentication(null); } return
-	 * "redirect:/login?logout"; //You can redirect wherever you want, but generally
-	 * it's a good practice to show login screen again. }
-	 */
     
     @RequestMapping(value="/eliminarsoli/{idsolicitud}")
 	public String eliminaSoli(@PathVariable int idsolicitud) {
